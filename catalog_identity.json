@@ -1,0 +1,48 @@
+{
+  "format_version": 1,
+  "game": {
+    "name": "Arc the Lad Collection - Arc Arena - Monster Tournament",
+    "id": "SLUS-01255",
+    "boot_exe": "SLUS_012.55"
+  },
+  "marketing": {
+    "description": "",
+    "publisher": "",
+    "year": "",
+    "region": "USA",
+    "players": 2
+  },
+  "rom_identity": {
+    "cue_name": "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).cue",
+    "bin_name": "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).bin",
+    "track_counts": [
+      1
+    ],
+    "require_cue": true,
+    "data_track": {
+      "size": 182983248,
+      "md5": "3222f723f838ae4acac422b6f50f27a2",
+      "sha1": "79918243e96a536a879cf86d380030746deb9f39",
+      "crc32": "d1460eab"
+    },
+    "disc_fp": "069b0430b040d9fc85d197495ee2b7b6bf07ea71167b8a2f55d3507e83254437"
+  },
+  "exe": {
+    "load_address": "0x800C1400",
+    "entry_pc": "0x8015F944",
+    "text_size": "0x000D8000",
+    "stack_base": "0x801FFFF0"
+  },
+  "seeds": {
+    "count": 2027,
+    "source": "boot_exe_jal"
+  },
+  "warnings": [
+    "cue has only 1 TRACK — Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}

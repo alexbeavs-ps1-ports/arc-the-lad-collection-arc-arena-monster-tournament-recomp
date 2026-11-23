@@ -1,0 +1,59 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Arc the Lad Collection - Arc Arena - Monster Tournament"
+id = "SLUS-01255"
+players = 2
+exe = "disc/SLUS_012.55"
+disc = "disc/Arc the Lad Collection - Arc Arena - Monster Tournament (USA).cue"
+discs = ["disc/Arc the Lad Collection - Arc Arena - Monster Tournament (USA).cue"]
+disc_serials = ["SLUS-01255"]
+load_address = "0x800C1400"
+entry_pc = "0x8015F944"
+text_size = "0x000D8000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).bin"
+cue_name = "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).cue"
+boot_exe = "SLUS_012.55"
+known_sizes = [182983248]
+known_md5 = [
+  "3222f723f838ae4acac422b6f50f27a2",
+]
+known_sha1 = [
+  "79918243e96a536a879cf86d380030746deb9f39",
+]
+known_crc32 = [
+  "d1460eab",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+bios_hle = false
+window_title = "Arc the Lad Collection - Arc Arena - Monster Tournament Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "069b0430b040d9fc85d197495ee2b7b6bf07ea71167b8a2f55d3507e83254437"

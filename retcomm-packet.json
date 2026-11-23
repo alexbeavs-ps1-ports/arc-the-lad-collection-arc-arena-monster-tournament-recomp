@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "arc-the-lad-collection-arc-arena-monster-tournament-psx",
+  "name": "Arc the Lad Collection - Arc Arena - Monster Tournament",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "arc-the-lad-collection-arc-arena-monster-tournament-recomp",
+  "rom_identity": {
+    "crc32": [
+      "d1460eab"
+    ],
+    "md5": [
+      "3222f723f838ae4acac422b6f50f27a2"
+    ],
+    "sha1": [
+      "79918243e96a536a879cf86d380030746deb9f39"
+    ],
+    "disc_serials": [
+      "SLUS-01255"
+    ],
+    "sizes": [
+      182983248
+    ],
+    "filenames": [
+      "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).cue",
+      "Arc the Lad Collection - Arc Arena - Monster Tournament (USA).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "069b0430b040d9fc85d197495ee2b7b6bf07ea71167b8a2f55d3507e83254437"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/arc-the-lad-collection-arc-arena-monster-tournament-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "arc-the-lad-collection-arc-arena-monster-tournament-*-windows-x64.zip",
+      "linux-x64": "arc-the-lad-collection-arc-arena-monster-tournament-*-linux-x64.zip",
+      "macos-arm64": "arc-the-lad-collection-arc-arena-monster-tournament-*-macos-arm64.zip",
+      "macos-x64": "arc-the-lad-collection-arc-arena-monster-tournament-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "arc_the_lad_collection_arc_arena_monster_tournament.exe",
+    "linux": "arc_the_lad_collection_arc_arena_monster_tournament",
+    "macos": "arc_the_lad_collection_arc_arena_monster_tournament"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/arc-the-lad-collection-arc-arena-monster-tournament-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
